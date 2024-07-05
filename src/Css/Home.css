@@ -1,0 +1,43 @@
+.homeContainer {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(51, 51, 51, 0.95));
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 69, 0, 0.2);
+}
+
+.homeContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ff4500, transparent);
+}
+
+.homeContainer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ff4500, transparent);
+}
+
+@media (min-width: 1200px) {
+    .homeContainer {
+        max-width: 1200px;
+        border-radius: 10px;
+        margin: 2rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .homeContainer {
+        padding: 2rem 0.5rem;
+    }
+}
